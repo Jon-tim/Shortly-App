@@ -73,6 +73,7 @@ nav div:nth-child(2) {
   font-size: 2.2rem;
   text-align: center;
   line-height: 2.7rem;
+  font-weight: 700;
 }
 
 .hero-page article p {
@@ -99,7 +100,7 @@ nav div:nth-child(2) {
 
 .shortner {
   position: relative;
-  top: -110px;
+  top: -90px;
   overflow: hidden;
   width: 100%;
   background-color: var(--Dark-Violet);
@@ -157,6 +158,7 @@ nav div:nth-child(2) {
 
 .featured .feat-head h2 {
   font-size: 1.6rem;
+  font-weight: 700;
 }
 .featured .feat-head p {
   padding: 0.5rem;
@@ -184,6 +186,7 @@ nav div:nth-child(2) {
 .feats-cards h4 {
   font-size: 1.24rem;
   margin-top: -70px;
+  font-weight: 600;
 }
 
 .feats-cards p {
@@ -214,12 +217,47 @@ nav div:nth-child(2) {
 .boost-links h2 {
   color: #fff;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 footer {
+  padding: 3rem 0rem;
   background-color: var(--Very-Dark-Violet);
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.media-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.media-icons svg path:hover {
+  fill: var(--Cyan);
+}
+footer section div {
+  text-align: center;
+}
+footer section div p {
+  /* font-size: 1rem; */
+  color: #fff;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Gray);
+}
 /* 
 - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)
