@@ -78,7 +78,6 @@ span {
 }
 
 .open .three {
-  /* display: none; */
   transform: rotate(-45deg) translate(2px, -4px);
 }
 
