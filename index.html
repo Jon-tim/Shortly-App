@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -73,9 +72,13 @@
         </article>
       </section>
       <section class="content-body">
-        <section class="shortner">
-          <input type="text" placeholder="Shorten a link here..." />
-          <input type="button" value="Shorten It!" />
+        <section class="shortener">
+          <input
+            type="text"
+            class="link-input"
+            placeholder="Shorten a link here..."
+          />
+          <button class="link-submit">Short It!</button>
         </section>
         <section class="shortened-links"></section>
         <section class="featured">
