@@ -1,12 +1,13 @@
 "use strict";
 
 const menu = document.querySelector(".hamburger");
+const mobileNav = document.querySelector(".mobile-menu");
 
 const bars = document.querySelectorAll("span");
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("open");
-  console.log("clicked");
+  mobileNav.classList.toggle("menu-closed");
 });
 
 // const menuBtn = document.querySelector(".menu");

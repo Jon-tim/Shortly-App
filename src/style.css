@@ -83,7 +83,7 @@ span {
 }
 
 .mobile-menu {
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 10px;
   position: absolute;
   top: 4rem;
@@ -97,6 +97,9 @@ span {
   gap: 1.3rem;
 }
 
+.menu-closed {
+  display: none;
+}
 .mobile-menu a {
   color: #fff;
   font-weight: 600;
