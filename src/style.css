@@ -175,12 +175,12 @@ span {
   width: 100%;
   /* height: 152px; */
   background-color: var(--Dark-Violet);
-  display: flex;
+  /* display: flex;
   gap: 1rem;
+  flex-direction: column;
+  align-items: center; */
   padding: 1rem;
   border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -189,6 +189,7 @@ span {
 
 .link-input,
 .link-submit {
+  display: block;
   width: 100%;
   padding: 0.5rem;
   border-radius: 0.3rem;
@@ -196,15 +197,24 @@ span {
   outline: none;
 }
 .link-input {
+  color: var(--Grayish-Violet);
   padding-left: 0.9rem;
   /* height: 45px; */
-
 }
 .link-input::placeholder {
   font-size: 0.9rem;
 }
+.error {
+  display: none;
+  align-self: flex-start;
+}
+.error em {
+  color: var(--Red);
+  font-size: 0.7rem;
+}
 
 .link-submit {
+  margin-top: 1rem;
   background-color: var(--Cyan);
   color: #fff;
   font-weight: 700;
