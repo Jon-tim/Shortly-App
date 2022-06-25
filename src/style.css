@@ -31,6 +31,7 @@ main {
 }
 
 nav {
+  position: relative;
   margin: 2rem 1rem 1rem;
   display: flex;
   align-items: center;
@@ -81,6 +82,37 @@ span {
   transform: rotate(-45deg) translate(2px, -4px);
 }
 
+.mobile-menu {
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--Dark-Violet);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-menu a {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mobile-menu hr {
+  margin: 1rem 0rem;
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: var(--Grayish-Violet);
+}
+.mobile-menu button {
+  width: 100%;
+}
 .hero-page {
   margin-top: 1.5rem;
   display: flex;
@@ -116,7 +148,8 @@ span {
   font-size: 1rem;
 }
 
-.get-started {
+.get-started,
+.mobile-menu button {
   background-color: var(--Cyan);
   border: none;
   border-radius: 50px;
