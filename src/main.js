@@ -47,4 +47,5 @@ linkSubmit.addEventListener("click", (e) => {
     errorMessage.style.display = "none";
     shortener();
   }
+  linkInput.value = "";
 });
