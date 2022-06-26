@@ -25,3 +25,11 @@ linkSubmit.addEventListener("click", () => {
     errorMessage.style.display = "none";
   }
 });
+
+
+
+
+//CREATE SHORTENED LINKS THROUGH DOM
+// function shortened () {
+//   ``
+// }
