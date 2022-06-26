@@ -229,6 +229,10 @@ span {
 
 .shortened-links {
   /* display: none; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
@@ -276,6 +280,10 @@ span {
   outline: none;
   font-size: 0.9rem;
 }
+
+/* .copyBtn {
+  background-color: var(--Grayish-Violet);
+} */
 
 .featured {
   display: flex;
