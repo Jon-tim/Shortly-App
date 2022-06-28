@@ -11,11 +11,13 @@ const shortenedLinkContainer = document.querySelector(".shortened-links");
 
 const bars = document.querySelectorAll("span");
 
+// OPEN MOBILE MENU BY TOGGLING THE MENU ICON
 menu.addEventListener("click", () => {
   menu.classList.toggle("open");
   mobileNav.classList.toggle("menu-closed");
 });
 
+// FETCH THE API AND PERFORM SHORTENING FUNCTION
 const shortener = async () => {
   const response = await fetch(
     `https://api.shrtco.de/v2/shorten?url=${linkInput.value}`
@@ -25,16 +27,21 @@ const shortener = async () => {
   const htmlUrls = `<div class="cont">
       <p class="cont-one">${data.result.original_link}</p>
       <div class="cont-two">
-      <p>${data.result.full_short_link}</p>
+      <p class="generated-link">${data.result.full_short_link}</p>
       <button class="copyBtn">copy</button>
       </div>
       </div>`;
 
   shortenedLinkContainer.insertAdjacentHTML("afterbegin", htmlUrls);
 
+  // COPY THE LINK AND REMOVE THE LINK CARD FROM THE BROWSER
   const copy = shortenedLinkContainer.querySelector(".copyBtn");
+  const genLink =
+    shortenedLinkContainer.querySelector(".generated-link").textContent;
+  // console.log(genLink);
 
   copy.addEventListener("click", (e) => {
+    navigator.clipboard.writeText(genLink);
     e.target.style.backgroundColor = "var(--Dark-Violet)";
     e.target.textContent = "copied!";
 
@@ -42,13 +49,11 @@ const shortener = async () => {
     // console.log(removeCopied);
     setTimeout(() => {
       removeCopied.remove();
-    }, 1000);
-    // parent.remove
+    }, 2000);
   });
-
-  // console.log(copy)
 };
 
+// CHECK IF A LINK IS PASTED IN THE INPUT SECTION AND THEN DISPLAY
 linkSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   if (linkInput.value === "") {
