@@ -9,8 +9,6 @@ const errorMessage = document.querySelector(".error");
 
 const shortenedLinkContainer = document.querySelector(".shortened-links");
 
-// const copyUrlBtn = document.querySelectorAll(".copyBtn");
-
 const bars = document.querySelectorAll("span");
 
 menu.addEventListener("click", () => {
@@ -33,6 +31,22 @@ const shortener = async () => {
       </div>`;
 
   shortenedLinkContainer.insertAdjacentHTML("afterbegin", htmlUrls);
+
+  const copy = shortenedLinkContainer.querySelector(".copyBtn");
+
+  copy.addEventListener("click", (e) => {
+    e.target.style.backgroundColor = "var(--Dark-Violet)";
+    e.target.textContent = "copied!";
+
+    let removeCopied = e.target.parentElement.parentElement;
+    // console.log(removeCopied);
+    setTimeout(() => {
+      removeCopied.remove();
+    }, 1000);
+    // parent.remove
+  });
+
+  // console.log(copy)
 };
 
 linkSubmit.addEventListener("click", (e) => {
@@ -47,5 +61,6 @@ linkSubmit.addEventListener("click", (e) => {
     errorMessage.style.display = "none";
     shortener();
   }
+
   linkInput.value = "";
 });
