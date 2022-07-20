@@ -42,13 +42,10 @@ const shortener = async () => {
     i.addEventListener("click", (e) => {
       // console.log(genLink);
 
-      navigator.clipboard
-        .writeText(genLink)
-        .then(() => alert("Text copied"))
-        .catch(console.log("nope"));
-
-      e.target.style.backgroundColor = "var(--Dark-Violet)";
-      e.target.textContent = "copied!";
+      navigator.clipboard.writeText(genLink).then(() => {
+        e.target.style.backgroundColor = "var(--Dark-Violet)";
+        e.target.textContent = "copied!";
+      });
 
       let removeCopied = e.target.parentElement.parentElement;
       // console.log(removeCopied);
