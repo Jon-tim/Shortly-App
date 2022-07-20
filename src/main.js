@@ -42,6 +42,7 @@ const shortener = async () => {
 
   copy.addEventListener("click", (e) => {
     navigator.clipboard.writeText(genLink);
+    // copyToClipboard(genLink);
     e.target.style.backgroundColor = "var(--Dark-Violet)";
     e.target.textContent = "copied!";
 
