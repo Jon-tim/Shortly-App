@@ -32,7 +32,7 @@ main {
 
 nav {
   position: relative;
-  margin: 2rem 1rem 1rem;
+  padding: 2rem 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -316,6 +316,8 @@ span {
   align-items: center;
   text-align: center;
   gap: 0.5rem;
+  width: 100%;
+  max-width: 460px;
 }
 
 .featured .feat-head h2 {
@@ -344,6 +346,7 @@ span {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+  /* max-width: 400px; */
 }
 .feats-cards h4 {
   font-size: 1.24rem;
@@ -489,13 +492,14 @@ a {
   }
 
   footer {
-    padding: 3rem 0;
+    padding: 3rem 1rem;
   }
 
   .footer-content {
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     align-items: flex-start;
+    gap: 2rem;
   }
 
   footer section div {
@@ -516,5 +520,49 @@ a {
   footer section div ul {
     gap: 0.8rem;
     align-items: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav,
+  .footer-content,
+  .content-holder {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  .hero-page {
+    margin: 0 auto;
+    margin-top: 2rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 150px;
+    max-width: 1100px;
+  }
+
+  .hero-page div:nth-child(1) img {
+    width: 150%;
+    position: relative;
+    right: -30px;
+  }
+
+  .hero-page article {
+    align-items: flex-start;
+    gap: 0rem;
+    margin: 1rem;
+  }
+
+  .hero-page article h1 {
+    max-width: 800px;
+    font-size: 3.8rem;
+    text-align: left;
+    line-height: 5rem;
+  }
+
+  .hero-page article p {
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.2rem;
   }
 }
