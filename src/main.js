@@ -35,22 +35,27 @@ const shortener = async () => {
   shortenedLinkContainer.insertAdjacentHTML("afterbegin", htmlUrls);
 
   // COPY THE LINK AND REMOVE THE LINK CARD FROM THE BROWSER
-  const copy = shortenedLinkContainer.querySelector(".copyBtn");
+  const copy = shortenedLinkContainer.querySelectorAll(".copyBtn");
   const genLink =
     shortenedLinkContainer.querySelector(".generated-link").textContent;
-  // console.log(genLink);
+  copy.forEach((i) => {
+    i.addEventListener("click", (e) => {
+      // console.log(genLink);
 
-  copy.addEventListener("click", (e) => {
-    navigator.clipboard.writeText(genLink);
-    // copyToClipboard(genLink);
-    e.target.style.backgroundColor = "var(--Dark-Violet)";
-    e.target.textContent = "copied!";
+      navigator.clipboard
+        .writeText(genLink)
+        .then(() => alert("Text copied"))
+        .catch(console.log("nope"));
 
-    let removeCopied = e.target.parentElement.parentElement;
-    // console.log(removeCopied);
-    setTimeout(() => {
-      removeCopied.remove();
-    }, 2000);
+      e.target.style.backgroundColor = "var(--Dark-Violet)";
+      e.target.textContent = "copied!";
+
+      let removeCopied = e.target.parentElement.parentElement;
+      // console.log(removeCopied);
+      setTimeout(() => {
+        removeCopied.remove();
+      }, 2000);
+    });
   });
 };
 
