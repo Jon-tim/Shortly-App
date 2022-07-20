@@ -176,20 +176,29 @@ span {
 }
 
 .shortener {
+  position: relative;
   margin-bottom: 1rem;
   overflow: hidden;
   width: 100%;
   background-color: var(--Dark-Violet);
+  /* background-color: transparent; */
   padding: 1rem;
   border-radius: 10px;
-  background-image: url("../images/bg-shorten-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 70px -45px;
+}
+
+.bg-shorten {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.desktop {
+  display: none;
 }
 
 .link-input,
 .link-submit {
+  position: relative;
   display: block;
   width: 100%;
   padding: 0.5rem;
@@ -280,7 +289,6 @@ span {
   outline: none;
   font-size: 0.9rem;
 }
-
 
 .featured {
   display: flex;
@@ -417,7 +425,6 @@ a {
   text-decoration: none;
   color: var(--Gray);
 }
-/* 
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com) */
+
+@media screen {
+}

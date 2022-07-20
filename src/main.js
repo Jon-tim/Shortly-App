@@ -40,15 +40,14 @@ const shortener = async () => {
     shortenedLinkContainer.querySelector(".generated-link").textContent;
   copy.forEach((i) => {
     i.addEventListener("click", (e) => {
-      // console.log(genLink);
-
+      
       navigator.clipboard.writeText(genLink).then(() => {
         e.target.style.backgroundColor = "var(--Dark-Violet)";
         e.target.textContent = "copied!";
       });
 
       let removeCopied = e.target.parentElement.parentElement;
-      // console.log(removeCopied);
+    
       setTimeout(() => {
         removeCopied.remove();
       }, 2000);
