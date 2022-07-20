@@ -365,9 +365,7 @@ span {
 
 .boost-links {
   overflow: hidden;
-  background-image: url("../images/bg-boost-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -377,11 +375,14 @@ span {
 }
 
 .boost-links h2 {
+  position: relative;
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
 }
-
+.get-started {
+  position: relative;
+}
 footer {
   padding: 3rem 0rem;
   background-color: var(--Very-Dark-Violet);
@@ -485,5 +486,35 @@ a {
   }
   nav {
     gap: 3rem;
+  }
+
+  footer {
+    padding: 3rem 0;
+  }
+
+  .footer-content {
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  footer section div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer section div p {
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  footer section div ul {
+    gap: 0.8rem;
+    align-items: flex-start;
   }
 }
