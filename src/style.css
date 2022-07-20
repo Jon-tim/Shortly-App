@@ -43,7 +43,7 @@ nav div:nth-child(3) {
   font-size: 1.4rem;
 } /* mobile menu button*/
 
-nav div:nth-child(2) {
+.desktop-nav {
   display: none;
 } /*nav ul lists*/
 
@@ -151,7 +151,8 @@ span {
 }
 
 .get-started,
-.mobile-menu button {
+.mobile-menu button,
+.desktop-nav-cta button {
   background-color: var(--Cyan);
   border: none;
   border-radius: 50px;
@@ -161,13 +162,14 @@ span {
   margin-top: 0.8rem;
   cursor: pointer;
 }
-
+.get-started:hover,
+.mobile-menu button:hover,
+.desktop-nav-cta button:hover {
+  opacity: 0.5;
+}
 .content-body {
   position: relative;
-  /* padding-bottom: -90px; */
-  /* margin-bottom: -90px; */
   background-color: var(--Gray);
-  /* height: ; */
 }
 .content-holder {
   padding: 1rem;
@@ -181,15 +183,21 @@ span {
   overflow: hidden;
   width: 100%;
   background-color: var(--Dark-Violet);
-  /* background-color: transparent; */
   padding: 1rem;
   border-radius: 10px;
 }
 
-.bg-shorten {
+.mobile,
+.desktop {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.desktop {
+  height: 100%;
+  width: 100%;
+  left: 0;
 }
 
 .desktop {
@@ -426,5 +434,56 @@ a {
   color: var(--Gray);
 }
 
-@media screen {
+@media only screen and (min-width: 768px) {
+  .shortener {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.7rem 2.2rem;
+  }
+  .error {
+    position: absolute;
+    transform: translateY(170%);
+  }
+  nav div:nth-child(3),
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .link-submit {
+    margin-top: 0;
+    width: 20%;
+  }
+  .link-input {
+    width: 80%;
+  }
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  } /*nav ul lists*/
+
+  .desktop-nav ul,
+  .desktop-nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .desktop-nav-cta button {
+    margin-top: 0px;
+    padding: 0.5rem 1rem;
+  }
+  .desktop-nav ul li a {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .desktop-nav ul li a:hover {
+    color: var(--Very-Dark-Violet);
+  }
+  nav {
+    gap: 3rem;
+  }
 }

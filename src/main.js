@@ -60,11 +60,11 @@ linkSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   if (linkInput.value === "") {
     linkInput.classList.add("invalid");
-    linkSubmit.style.marginTop = "0.5rem";
+    // linkSubmit.style.marginTop = "0.5rem";
     errorMessage.style.display = "block";
   } else {
     linkInput.classList.remove("invalid");
-    linkSubmit.style.marginTop = "1rem";
+    // linkSubmit.style.marginTop = "1rem";
     errorMessage.style.display = "none";
     shortener();
   }
