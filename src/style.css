@@ -366,6 +366,11 @@ span {
   top: -90px;
 }
 
+.feats-cards div img {
+  height: 40px;
+  width: 40;
+}
+
 .boost-links {
   overflow: hidden;
   position: relative;
@@ -487,7 +492,7 @@ a {
   }
   .desktop-nav ul li a {
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .desktop-nav ul li a:hover {
     color: var(--Very-Dark-Violet);
@@ -570,14 +575,6 @@ a {
     text-align: left;
     font-size: 1.2rem;
   }
-  /* .shortened-links {
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-  } */
   .cont {
     flex-direction: row;
     justify-content: space-between;
@@ -595,7 +592,9 @@ a {
     color: var(--Dark-Violet);
     /* text-align: center; */
   }
-
+  .error {
+    transform: translateY(230%);
+  }
   .cont-two {
     display: flex;
     align-items: center;
@@ -611,5 +610,42 @@ a {
 
   .cont-two button {
     width: 100px;
+  }
+  .content-holder {
+    max-width: 1100px;
+  }
+
+  .feats {
+    width: 100%;
+  }
+
+  .featured .feats > div {
+    flex-direction: row;
+    text-align: left;
+    gap: unset;
+    width: 100%;
+    height: 370px;
+    justify-content: space-between;
+  }
+
+  .feats-cards {
+    width: 330px;
+    height: 275px;
+  }
+
+  .feats-cards h4 {
+    align-self: flex-start;
+  }
+  .cd-1 {
+    align-self: flex-start;
+  }
+  .cd-2 {
+    align-self: center;
+  }
+  .cd-3 {
+    align-self: flex-end;
+  }
+  .boost-links h2 {
+    font-size: 2rem;
   }
 }
